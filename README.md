@@ -146,3 +146,60 @@ docker compose ps
 crontab -l
 ```
 Скрипты выполняют автоматический запуск и остановку парсеров каждый день в 12 часов ночи, а также выполнение первоначальной настройки и сборки контейнеров.
+# Пример изменения конфигурации для использования с NGINX и ssl
+1. В docker compose добавляем конфигурацию nginx
+```
+nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./certs/fullchain.crt:/etc/nginx/certs/fullchain.crt
+      - ./certs/privkey.key:/etc/nginx/certs/privkey.key
+    depends_on:
+      - site
+    network_mode: host
+```
+2. nginx.conf должен лежать рядом с docker-compose.yml и содержать следующее
+fullchain.crt - содержит полную цепочку сертификатов
+privkey.key - содержит приватный ключ для ssl
+```
+events {}
+
+http {
+    server {
+        listen 80;
+        server_name <domain_name>;
+
+        location / {
+            return 301 https://$host$request_uri;
+        }
+    }
+
+    server {
+        listen 443 ssl;
+        server_name <domain_name>;
+
+        ssl_certificate /etc/nginx/certs/fullchain.crt;
+        ssl_certificate_key /etc/nginx/certs/privkey.key;
+
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers on;
+        ssl_ciphers HIGH:!aNULL:!MD5;
+
+        location / {
+            proxy_pass http://<ip>:5000;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+        }
+    }
+}
+
+```
