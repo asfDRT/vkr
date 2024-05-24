@@ -1,0 +1,184 @@
+/* Основной стиль для всего документа */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Контейнер для основного содержимого */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Шапка страницы */
+.header {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание элементов вправо */
+    gap: 20px; /* Расстояние между ссылками */
+    margin-bottom: 20px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Бургер-меню для мобильных устройств */
+.burger-menu {
+    display: none; /* Скрываем бургер-меню по умолчанию */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 14px 20px;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Ссылки навигации */
+.nav-links {
+    display: flex; /* Горизонтальное выравнивание */
+    gap: 20px; /* Расстояние между ссылками */
+}
+
+/* Мобильное отображение навигационных ссылок */
+.nav-links.mobile {
+    display: none; /* Скрываем по умолчанию */
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-links.mobile a {
+    padding: 10px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Форма поиска */
+.search-form {
+    margin-bottom: 20px;
+}
+
+.search-form label, .search-form input, .search-form button {
+    margin-right: 10px;
+}
+
+/* Таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Убираем двойные линии */
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    word-wrap: break-word; /* Перенос слов для длинных строк */
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center; /* Центрируем ссылки пагинации */
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+/* Кнопка поиска */
+.search-button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #555;
+}
+
+/* Media Queries для мобильных устройств */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .burger-menu {
+        display: flex; /* Показать бургер-меню на мобильных устройствах */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.mobile {
+        display: flex;
+    }
+
+    .search-form label,
+    .search-form input,
+    .search-form button {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    table, th, td {
+        font-size: 14px; /* Уменьшенный размер шрифта в таблицах */
+    }
+
+    .hide-column {
+        display: none; /* Скрытие столбцов на мобильных устройствах */
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .pagination {
+        flex-direction: column; /* Вертикальное расположение ссылок пагинации */
+    }
+
+    .pagination a {
+        margin: 5px 0;
+    }
+}

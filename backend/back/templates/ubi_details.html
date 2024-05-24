@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styledet.css')}}">
+    <title>УБИ детально</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-links">
+                <a href="/">Главная</a>
+                <a href="https://t.me/vkrbdu_bot">Telegram-bot</a>
+                <a href="{{ url_for('ubi_list')}}">УБИ</a>
+                <a href="{{ url_for('statistics')}}">Статистика</a>
+                <a href="{{ url_for('glossary')}}">Глоссарий</a>
+            </div>
+        </div>
+        
+        <h1>Угроза информационной безопаности</h1>
+        <button class="back-button" onclick="history.back()">Назад</button>
+        <table>
+            <caption>УБИ ФСТЭК</caption>
+            <tr>
+                <th>ID</th>
+                <td>{{ ubi['id'] }}</td>
+            </tr>
+            <tr>
+                <th>Название</th>
+                <td>{{ ubi['name'] }}</td>
+            </tr>
+            <tr>
+                <th>Описание</th>
+                <td>{{ ubi['description'] }}</td>
+            </tr>
+            <tr>
+                <th>Источник</th>
+                <td>{{ ubi['source'] }}</td>
+            </tr>
+            <tr>
+                <th>Объект</th>
+                <td>{{ ubi['object'] }}</td>
+            </tr>
+            <tr>
+                <th>Нарушение конфиденциальности</th>
+                <td>{{ ubi['confidentiality_violation'] }}</td>
+            </tr>
+            <tr>
+                <th>Нарушение целостности</th>
+                <td>{{ ubi['integrity_violation'] }}</td>
+            </tr>
+            <tr>
+                <th>Нарушение доступности</th>
+                <td>{{ ubi['availability_violation'] }}</td>
+            </tr>
+        </table>
+    </div>
+    <script src="{{url_for('static', filename='forburger.js')}}"></script>
+</body>
+</html>

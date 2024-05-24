@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='stylemain.css')}}">
+    <title>УБИ</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-links">
+                <a href="/">Главная</a>
+                <a href="https://t.me/vkrbdu_bot">Telegram-bot</a>
+                <a href="{{ url_for('ubi_list')}}">УБИ</a>
+                <a href="{{ url_for('statistics')}}">Статистика</a>
+                <a href="{{ url_for('glossary')}}">Глоссарий</a>
+            </div>
+        </div>
+
+        <h1>Список угроз информационной безопаности</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Название</th>
+                    <th class="hide-column">Источник</th>
+                    <th>Детально</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ubi in ubi_list %}
+                <tr>
+                    <td>{{ ubi['id'] }}</td>
+                    <td>{{ ubi['name'] }}</td>
+                    <td class="hide-column">{{ ubi['source'] }}</td>
+                    <td><a href="/ubi/details/{{ ubi.id }}">Детально</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="pagination">
+            {% if page > 1 %}
+                <a href="/ubi/page/{{ page - 1 }}">&laquo; Предыдущая</a>
+            {% endif %}
+            <a href="/page/{{ page }}">{{ page }}</a>
+            {% if ubi_list|length == 15 %}
+                <a href="/ubi/page/{{ page + 1 }}">Следующая &raquo;</a>
+            {% endif %}
+        </div>
+        
+    </div>
+    <script src="{{url_for('static', filename='forburger.js')}}"></script>
+</body>
+</html>

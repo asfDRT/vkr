@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='stylemain.css')}}">
+    <title>Уязвимости</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-links">
+                <a href="/">Главная</a>
+                <a href="https://t.me/vkrbdu_bot">Telegram-bot</a>
+                <a href="{{ url_for('ubi_list')}}">УБИ</a>
+                <a href="{{ url_for('statistics')}}">Статистика</a>
+                <a href="{{ url_for('glossary')}}">Глоссарий</a>
+            </div>
+        </div>
+        <h1>Уязвимости</h1>
+        <form class="search-form" action="/" method="get">
+            <label for="search">Поиск по BDU или CVE:</label>
+            <input type="text" id="search" name="search" value="{{ search or '' }}">
+            <button class="search-button" type="submit">Поиск</button>
+        </form>
+        <table>
+            <tr>
+                <th>Идентификатор BDU</th>
+                <th>Идентификатор CVE</th>
+                <th class="hide-column">Название</th>
+                <th class="hide-column">Уровень опасности</th>
+                <th>Детально</th>
+            </tr>
+            {% for vulnerability in vulnerabilities %}
+            <tr>
+                <td>{{ vulnerability['identifier'] }}</td>
+                <td>{{ vulnerability['cve'] }}</td>
+                <td class="hide-column">{{ vulnerability['name'] }}</td>
+                <td class="hide-column">{{ vulnerability['severity'] }}</td>
+                <td><a href="/details/{{ vulnerability['id'] }}">Детально</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="pagination">
+            {% if page > 1 %}
+                <a href="/page/{{ page - 1 }}">&laquo; Предыдущая</a>
+            {% endif %}
+            <a href="/page/{{ page }}">{{ page }}</a>
+            {% if vulnerabilities|length == 15 %}
+                <a href="/page/{{ page + 1 }}">Следующая &raquo;</a>
+            {% endif %}
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='forburger.js')}}"></script>
+</body>
+</html>

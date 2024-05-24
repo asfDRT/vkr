@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styleglos.css')}}">
+    <title>Уязвимости</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-links">
+                <a href="/">Главная</a>
+                <a href="https://t.me/vkrbdu_bot">Telegram-bot</a>
+                <a href="{{ url_for('ubi_list')}}">УБИ</a>
+                <a href="{{ url_for('statistics')}}">Статистика</a>
+                <a href="{{ url_for('glossary')}}">Глоссарий</a>
+            </div>
+        </div>
+        
+        <h1>Статистика базы данных</h1>
+
+        <div class="statistics-container">
+            <div class="stat-card">
+                <h2>ФСТЭК</h2>
+                <p>{{ stats['total_vulnerabilities'] }}</p>
+                <div class="description">Общее количество уязвимостей из БДУ ФСТЭК</div>
+            </div>
+            <div class="stat-card">
+                <h2>ФСТЭК ПО</h2>
+                <p>{{stats['total_software']}}</p>
+                <div class="description">Общее количество ПО для которых есть уязвимости</div>
+            </div>
+            <div class="stat-card">
+                <h2>ФСТЭК ОС</h2>
+                <p>{{ stats['total_os'] }}</p>
+                <div class="description">Общее количество ОС для которых есть уязвимости</div>
+            </div>
+            <div class="stat-card">
+                <h2>ФСТЭК CVE</h2>
+                <p>{{ stats['total_cve'] }}</p>
+                <div class="description">Общее количество CVE связанных с BDU из БДУ ФСТЭК</div>
+            </div>
+            <div class="stat-card">
+                <h2>CVE NVD</h2>
+                <p>{{ stats['total_cve_nvd'] }}</p>
+                <div class="description">Общее количество уязвимостей из NVD</div>
+            </div>
+            <div class="stat-card">
+                <h2>OpenCVE</h2>
+                <p>{{ stats['total_cve_opencve'] }}</p>
+                <div class="description">Общее количество уязвимостей из OpenCVE</div>
+            </div>
+            <div class="stat-card">
+                <h2>УБИ ФСТЭК</h2>
+                <p>{{ stats['total_ubi'] }}</p>
+                <div class="description">Общее количество угроз информацинной безопасности по ФСТЭК</div>
+            </div>
+        </div>
+        
+    </div>
+            
+    <script src="{{url_for('static', filename='forburger.js')}}"></script>
+</body>
+</html>

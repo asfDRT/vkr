@@ -1,0 +1,130 @@
+version: '1.1.1'
+
+services:
+  bot:
+    env_file:
+      - .env
+    build:
+      context: ./bot/
+      dockerfile: Dockerfile
+    image: bot_image
+    environment:
+      TOKEN: ${TOKEN}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_DATABASE: ${DB_DATABASE}
+    depends_on:
+      - site
+
+  site:
+    env_file:
+      - .env
+    build:
+      context: ./backend/back
+      dockerfile: Dockerfile
+    image: site_image
+    ports:
+      - "5000:5000"
+    environment:
+      SECRET_KEY: ${SECRET_KEY}
+      USERNAME: ${USERNAME}
+      PASSWORD: ${PASSWORD}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_DATABASE: ${DB_DATABASE}
+  
+  parser_nvd:
+    build:
+      context: ./parser_nvd
+      dockerfile: Dockerfile
+      args:
+        DB_USER: ${DB_USER}
+        DB_PASSWORD: ${DB_PASSWORD}
+        DB_HOST: ${DB_HOST}
+        DB_PORT: ${DB_PORT}
+        DB_DATABASE: ${DB_DATABASE}
+    image: parser_nvd
+    env_file:
+      - .env
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_DATABASE: ${DB_DATABASE}
+    depends_on:
+      - site
+      - bot
+    
+  parser_opencve:
+    build:
+      context: ./parser_opencve
+      dockerfile: Dockerfile
+      args:
+        DB_USER: ${DB_USER}
+        DB_PASSWORD: ${DB_PASSWORD}
+        DB_HOST: ${DB_HOST}
+        DB_PORT: ${DB_PORT}
+        DB_DATABASE: ${DB_DATABASE}
+    image: parser_opencve
+    env_file:
+      - .env
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_DATABASE: ${DB_DATABASE}
+    depends_on:
+      - site
+      - bot
+
+  parser_xlsx:
+    build:
+      context: ./parser_xlsx
+      dockerfile: Dockerfile
+      args:
+        DB_USER: ${DB_USER}
+        DB_PASSWORD: ${DB_PASSWORD}
+        DB_HOST: ${DB_HOST}
+        DB_PORT: ${DB_PORT}
+        DB_DATABASE: ${DB_DATABASE}
+    image: parser_xlsx
+    env_file:
+      - .env
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_DATABASE: ${DB_DATABASE}
+    depends_on:
+      - site
+      - bot
+  
+  parser_xml:
+    build:
+      context: ./parser_xml
+      dockerfile: Dockerfile
+      args:
+        DB_USER: ${DB_USER}
+        DB_PASSWORD: ${DB_PASSWORD}
+        DB_HOST: ${DB_HOST}
+        DB_PORT: ${DB_PORT}
+        DB_DATABASE: ${DB_DATABASE}
+    image: parser_xml
+    env_file:
+      - .env
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_DATABASE: ${DB_DATABASE}
+    depends_on:
+      - site
+      - bot

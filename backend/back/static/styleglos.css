@@ -1,0 +1,138 @@
+/* Основной стиль для всего документа */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Фоновый цвет */
+    color: #333; /* Цвет текста */
+}
+
+/* Контейнер для основного содержимого */
+.container {
+    width: 90%; /* Ширина контейнера */
+    margin: 0 auto; /* Центрирование */
+    padding: 20px; /* Внутренние отступы */
+    background-color: #fff; /* Фоновый цвет контейнера */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Тень */
+}
+
+/* Бургер-меню для мобильных устройств */
+.burger-menu {
+    display: none; /* Скрыто по умолчанию */
+    flex-direction: column; /* Выравнивание по колонке */
+    cursor: pointer; /* Курсор при наведении */
+    padding: 14px 20px; /* Внутренние отступы */
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Ссылки навигации */
+.nav-links {
+    display: flex; /* Выравнивание по строке */
+    gap: 20px; /* Расстояние между ссылками */
+}
+
+/* Мобильное отображение навигационных ссылок */
+.nav-links.mobile {
+    display: none; /* Скрыто по умолчанию */
+    flex-direction: column; /* Выравнивание по колонке */
+    width: 100%;
+}
+
+.nav-links.mobile a {
+    padding: 10px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Шапка страницы */
+.header {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание элементов вправо */
+    gap: 20px; /* Расстояние между ссылками */
+    margin-bottom: 20px;
+}
+
+.header a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #333;
+    font-weight: bold; /* Жирное начертание */
+}
+
+/* Ссылки */
+a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Контейнер для статистики */
+.statistics-container {
+    display: flex; /* Гибкое выравнивание */
+    flex-wrap: wrap; /* Перенос элементов */
+    gap: 20px; /* Расстояние между карточками */
+    margin-top: 20px;
+}
+
+/* Карточка статистики */
+.stat-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Скругленные углы */
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Центрирование текста */
+}
+
+.stat-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.stat-card .description {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* Media Queries для мобильных устройств */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Уменьшенный размер шрифта */
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .burger-menu {
+        display: flex; /* Показать бургер-меню на мобильных устройствах */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.mobile {
+        display: flex;
+    }
+}

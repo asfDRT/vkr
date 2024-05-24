@@ -1,0 +1,674 @@
+2024-05-20 19:39:56,790 - INFO - Start polling
+2024-05-20 19:39:56,976 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-20 19:41:02,397 - INFO - Update id=503527544 is handled. Duration 1309 ms by bot id=6996471482
+2024-05-20 19:41:03,414 - INFO - Запрос статистики
+2024-05-20 19:41:03,414 - INFO - Подключение к БД
+2024-05-20 19:41:03,455 - INFO - Подключение к БД
+2024-05-20 19:41:03,505 - INFO - Подключение к БД
+2024-05-20 19:41:03,544 - INFO - Подключение к БД
+2024-05-20 19:41:03,584 - INFO - Подключение к БД
+2024-05-20 19:41:03,621 - INFO - Подключение к БД
+2024-05-20 19:41:03,821 - INFO - Update id=503527545 is handled. Duration 407 ms by bot id=6996471482
+2024-05-20 19:41:05,314 - INFO - Update id=503527546 is handled. Duration 236 ms by bot id=6996471482
+2024-05-20 19:41:07,248 - INFO - Update id=503527547 is handled. Duration 709 ms by bot id=6996471482
+2024-05-20 19:41:11,575 - INFO - Update id=503527548 is handled. Duration 229 ms by bot id=6996471482
+2024-05-20 19:42:12,043 - INFO - Update id=503527549 is handled. Duration 242 ms by bot id=6996471482
+2024-05-20 19:43:43,333 - INFO - Запрос статистики
+2024-05-20 19:43:43,333 - INFO - Подключение к БД
+2024-05-20 19:43:43,374 - INFO - Подключение к БД
+2024-05-20 19:43:43,425 - INFO - Подключение к БД
+2024-05-20 19:43:43,472 - INFO - Подключение к БД
+2024-05-20 19:43:43,512 - INFO - Подключение к БД
+2024-05-20 19:43:43,550 - INFO - Подключение к БД
+2024-05-20 19:43:43,874 - INFO - Update id=503527550 is handled. Duration 541 ms by bot id=6996471482
+2024-05-20 19:43:47,053 - INFO - Update id=503527551 is handled. Duration 210 ms by bot id=6996471482
+2024-05-20 19:43:48,679 - INFO - Update id=503527552 is handled. Duration 124 ms by bot id=6996471482
+2024-05-20 19:43:50,052 - INFO - Update id=503527553 is handled. Duration 96 ms by bot id=6996471482
+2024-05-20 19:43:52,811 - INFO - Update id=503527554 is handled. Duration 172 ms by bot id=6996471482
+2024-05-20 19:44:03,246 - INFO - Запрос статистики
+2024-05-20 19:44:03,246 - INFO - Подключение к БД
+2024-05-20 19:44:03,289 - INFO - Подключение к БД
+2024-05-20 19:44:03,340 - INFO - Подключение к БД
+2024-05-20 19:44:03,387 - INFO - Подключение к БД
+2024-05-20 19:44:03,428 - INFO - Подключение к БД
+2024-05-20 19:44:03,468 - INFO - Подключение к БД
+2024-05-20 19:44:03,674 - INFO - Update id=503527555 is handled. Duration 428 ms by bot id=6996471482
+2024-05-20 19:45:34,157 - WARNING - Received SIGINT signal
+2024-05-20 19:45:34,158 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-20 19:45:34,158 - INFO - Polling stopped
+2024-05-20 19:45:34,358 - WARNING - Received SIGINT signal
+2024-05-21 15:01:01,442 - INFO - Start polling
+2024-05-21 15:01:01,635 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:01:06,729 - INFO - Update id=503527556 is not handled. Duration 189 ms by bot id=6996471482
+2024-05-21 15:01:06,729 - ERROR - Cause exception while process update id=503527556 by bot id=6996471482
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end of Italic entity at byte offset 389
+Traceback (most recent call last):
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/main.py", line 42, in find_email
+    await message.answer("Бот выполняет поиск по базе данных, в которой есть данные с ФСТЭК, NVD, OpenCVE\n\n"
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/bot.py", line 509, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/aiohttp.py", line 178, in make_request
+    response = self.check_response(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end of Italic entity at byte offset 389
+2024-05-21 15:01:34,952 - INFO - Update id=503527557 is not handled. Duration 187 ms by bot id=6996471482
+2024-05-21 15:01:34,952 - ERROR - Cause exception while process update id=503527557 by bot id=6996471482
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end of Italic entity at byte offset 389
+Traceback (most recent call last):
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/main.py", line 42, in find_email
+    await message.answer("Бот выполняет поиск по базе данных, в которой есть данные с ФСТЭК, NVD, OpenCVE\n\n"
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/bot.py", line 509, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/aiohttp.py", line 178, in make_request
+    response = self.check_response(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end of Italic entity at byte offset 389
+2024-05-21 15:02:37,751 - INFO - Запрос статистики
+2024-05-21 15:02:37,751 - INFO - Подключение к БД
+2024-05-21 15:02:38,039 - INFO - Подключение к БД
+2024-05-21 15:02:38,351 - INFO - Подключение к БД
+2024-05-21 15:02:38,488 - INFO - Подключение к БД
+2024-05-21 15:02:38,603 - INFO - Подключение к БД
+2024-05-21 15:02:38,794 - INFO - Подключение к БД
+2024-05-21 15:02:39,224 - INFO - Update id=503527558 is handled. Duration 1473 ms by bot id=6996471482
+2024-05-21 15:02:42,181 - INFO - Update id=503527559 is not handled. Duration 68 ms by bot id=6996471482
+2024-05-21 15:02:42,181 - ERROR - Cause exception while process update id=503527559 by bot id=6996471482
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end of Italic entity at byte offset 389
+Traceback (most recent call last):
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/main.py", line 42, in find_email
+    await message.answer("Бот выполняет поиск по базе данных, в которой есть данные с ФСТЭК, NVD, OpenCVE\n\n"
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/bot.py", line 509, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/aiohttp.py", line 178, in make_request
+    response = self.check_response(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end of Italic entity at byte offset 389
+2024-05-21 15:02:57,002 - WARNING - Received SIGINT signal
+2024-05-21 15:02:57,002 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:02:57,002 - INFO - Polling stopped
+2024-05-21 15:02:57,186 - WARNING - Received SIGINT signal
+2024-05-21 15:02:59,941 - INFO - Start polling
+2024-05-21 15:03:00,197 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:03:00,510 - INFO - Update id=503527560 is handled. Duration 236 ms by bot id=6996471482
+2024-05-21 15:03:13,521 - INFO - Update id=503527561 is handled. Duration 152 ms by bot id=6996471482
+2024-05-21 15:03:15,328 - WARNING - Received SIGINT signal
+2024-05-21 15:03:15,328 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:03:15,328 - INFO - Polling stopped
+2024-05-21 15:03:15,576 - WARNING - Received SIGINT signal
+2024-05-21 15:03:18,282 - INFO - Start polling
+2024-05-21 15:03:18,466 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:03:18,813 - INFO - Update id=503527562 is handled. Duration 260 ms by bot id=6996471482
+2024-05-21 15:03:19,905 - INFO - Update id=503527563 is handled. Duration 109 ms by bot id=6996471482
+2024-05-21 15:03:21,530 - INFO - Поиск УБИ: 1
+2024-05-21 15:03:21,530 - INFO - Подключение к БД
+2024-05-21 15:03:21,567 - ERROR - Произошла ошибка при извлечении данных по УБИ: invalid input for query argument $1: '1' ('str' object cannot be interpreted as an integer)
+2024-05-21 15:03:21,629 - INFO - Update id=503527564 is not handled. Duration 99 ms by bot id=6996471482
+2024-05-21 15:03:21,629 - ERROR - Cause exception while process update id=503527564 by bot id=6996471482
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '.' is reserved and must be escaped with the preceding '\'
+Traceback (most recent call last):
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/main.py", line 251, in handle_ubi_id
+    await message.answer(f"Информация по УБИ с идентификатором {ubi_id} не найдена.")
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/bot.py", line 509, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/aiohttp.py", line 178, in make_request
+    response = self.check_response(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '.' is reserved and must be escaped with the preceding '\'
+2024-05-21 15:04:11,339 - INFO - Update id=503527565 is handled. Duration 236 ms by bot id=6996471482
+2024-05-21 15:04:12,585 - INFO - Update id=503527566 is handled. Duration 131 ms by bot id=6996471482
+2024-05-21 15:04:13,446 - INFO - Запрос последней уязвимости
+2024-05-21 15:04:13,446 - INFO - Подключение к БД
+2024-05-21 15:04:13,609 - INFO - Update id=503527567 is handled. Duration 261 ms by bot id=6996471482
+2024-05-21 15:04:16,921 - INFO - Поиск по BDU: BDU:2024-03740
+2024-05-21 15:04:16,921 - INFO - Подключение к БД
+2024-05-21 15:04:17,019 - INFO - Подключение к БД
+2024-05-21 15:04:17,741 - INFO - Подключение к БД
+2024-05-21 15:04:17,781 - INFO - Подключение к БД
+2024-05-21 15:04:17,871 - INFO - Подключение к БД
+2024-05-21 15:04:17,905 - INFO - Подключение к БД
+2024-05-21 15:04:18,141 - INFO - Update id=503527568 is handled. Duration 1220 ms by bot id=6996471482
+2024-05-21 15:04:41,885 - INFO - Запрос статистики
+2024-05-21 15:04:41,885 - INFO - Подключение к БД
+2024-05-21 15:04:41,926 - INFO - Подключение к БД
+2024-05-21 15:04:41,977 - INFO - Подключение к БД
+2024-05-21 15:04:42,014 - INFO - Подключение к БД
+2024-05-21 15:04:42,053 - INFO - Подключение к БД
+2024-05-21 15:04:42,090 - INFO - Подключение к БД
+2024-05-21 15:04:42,382 - INFO - Update id=503527569 is handled. Duration 498 ms by bot id=6996471482
+2024-05-21 15:04:46,128 - INFO - Update id=503527570 is handled. Duration 174 ms by bot id=6996471482
+2024-05-21 15:04:47,420 - INFO - Update id=503527571 is handled. Duration 121 ms by bot id=6996471482
+2024-05-21 15:04:50,426 - INFO - Поиск УБИ: 12
+2024-05-21 15:04:50,426 - INFO - Подключение к БД
+2024-05-21 15:04:50,461 - ERROR - Произошла ошибка при извлечении данных по УБИ: invalid input for query argument $1: '12' ('str' object cannot be interpreted as an integer)
+2024-05-21 15:04:50,526 - INFO - Update id=503527572 is not handled. Duration 101 ms by bot id=6996471482
+2024-05-21 15:04:50,526 - ERROR - Cause exception while process update id=503527572 by bot id=6996471482
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '.' is reserved and must be escaped with the preceding '\'
+Traceback (most recent call last):
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/main.py", line 251, in handle_ubi_id
+    await message.answer(f"Информация по УБИ с идентификатором {ubi_id} не найдена.")
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/bot.py", line 509, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/aiohttp.py", line 178, in make_request
+    response = self.check_response(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '.' is reserved and must be escaped with the preceding '\'
+2024-05-21 15:07:01,468 - WARNING - Received SIGINT signal
+2024-05-21 15:07:01,469 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:07:01,469 - INFO - Polling stopped
+2024-05-21 15:07:01,623 - WARNING - Received SIGINT signal
+2024-05-21 15:07:04,385 - INFO - Start polling
+2024-05-21 15:07:05,349 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:07:06,087 - INFO - Update id=503527573 is handled. Duration 277 ms by bot id=6996471482
+2024-05-21 15:07:08,263 - INFO - Поиск УБИ: 1
+2024-05-21 15:07:08,263 - INFO - Подключение к БД
+2024-05-21 15:07:08,299 - ERROR - Произошла ошибка при извлечении данных по УБИ: invalid input for query argument $1: '1' ('str' object cannot be interpreted as an integer)
+2024-05-21 15:07:08,481 - INFO - Update id=503527574 is handled. Duration 218 ms by bot id=6996471482
+2024-05-21 15:08:00,868 - WARNING - Received SIGINT signal
+2024-05-21 15:08:00,868 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:08:00,869 - INFO - Polling stopped
+2024-05-21 15:08:01,041 - WARNING - Received SIGINT signal
+2024-05-21 15:08:03,847 - INFO - Start polling
+2024-05-21 15:08:04,039 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:08:04,460 - INFO - Update id=503527575 is handled. Duration 344 ms by bot id=6996471482
+2024-05-21 15:08:05,525 - INFO - Поиск УБИ: 1
+2024-05-21 15:08:05,525 - INFO - Подключение к БД
+2024-05-21 15:08:05,655 - INFO - Update id=503527576 is handled. Duration 130 ms by bot id=6996471482
+2024-05-21 15:09:33,735 - INFO - Update id=503527577 is handled. Duration 1013 ms by bot id=6996471482
+2024-05-21 15:09:35,195 - INFO - Поиск УБИ: 123
+2024-05-21 15:09:35,195 - INFO - Подключение к БД
+2024-05-21 15:09:35,465 - INFO - Update id=503527578 is handled. Duration 270 ms by bot id=6996471482
+2024-05-21 15:10:58,905 - WARNING - Received SIGINT signal
+2024-05-21 15:10:58,905 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:10:58,906 - INFO - Polling stopped
+2024-05-21 15:10:59,087 - WARNING - Received SIGINT signal
+2024-05-21 15:11:02,131 - INFO - Start polling
+2024-05-21 15:11:02,326 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:11:06,193 - INFO - Update id=503527579 is handled. Duration 250 ms by bot id=6996471482
+2024-05-21 15:11:08,256 - INFO - Поиск УБИ: 2
+2024-05-21 15:11:08,256 - INFO - Подключение к БД
+2024-05-21 15:11:08,409 - INFO - Update id=503527580 is handled. Duration 153 ms by bot id=6996471482
+2024-05-21 15:11:10,625 - INFO - Запрос статистики
+2024-05-21 15:11:10,625 - INFO - Подключение к БД
+2024-05-21 15:11:10,665 - INFO - Подключение к БД
+2024-05-21 15:11:10,715 - INFO - Подключение к БД
+2024-05-21 15:11:10,752 - INFO - Подключение к БД
+2024-05-21 15:11:10,792 - INFO - Подключение к БД
+2024-05-21 15:11:10,827 - INFO - Подключение к БД
+2024-05-21 15:11:10,861 - INFO - Подключение к БД
+2024-05-21 15:11:10,979 - INFO - Update id=503527581 is handled. Duration 355 ms by bot id=6996471482
+2024-05-21 15:14:19,977 - WARNING - Received SIGINT signal
+2024-05-21 15:14:19,977 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:14:19,977 - INFO - Polling stopped
+2024-05-21 15:14:20,147 - WARNING - Received SIGINT signal
+2024-05-21 15:14:22,806 - INFO - Start polling
+2024-05-21 15:14:23,002 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:14:29,456 - INFO - Запрос статистики
+2024-05-21 15:14:29,456 - INFO - Подключение к БД
+2024-05-21 15:14:29,497 - INFO - Подключение к БД
+2024-05-21 15:14:29,546 - INFO - Подключение к БД
+2024-05-21 15:14:29,583 - INFO - Подключение к БД
+2024-05-21 15:14:29,620 - INFO - Подключение к БД
+2024-05-21 15:14:29,657 - INFO - Подключение к БД
+2024-05-21 15:14:29,692 - INFO - Подключение к БД
+2024-05-21 15:14:29,988 - INFO - Update id=503527582 is handled. Duration 533 ms by bot id=6996471482
+2024-05-21 15:14:33,263 - INFO - Запрос статистики
+2024-05-21 15:14:33,264 - INFO - Подключение к БД
+2024-05-21 15:14:33,305 - INFO - Подключение к БД
+2024-05-21 15:14:33,357 - INFO - Подключение к БД
+2024-05-21 15:14:33,394 - INFO - Подключение к БД
+2024-05-21 15:14:33,434 - INFO - Подключение к БД
+2024-05-21 15:14:33,470 - INFO - Подключение к БД
+2024-05-21 15:14:33,505 - INFO - Подключение к БД
+2024-05-21 15:14:33,622 - INFO - Update id=503527583 is handled. Duration 359 ms by bot id=6996471482
+2024-05-21 15:14:37,970 - INFO - Update id=503527584 is handled. Duration 78 ms by bot id=6996471482
+2024-05-21 15:14:40,259 - INFO - Update id=503527585 is handled. Duration 361 ms by bot id=6996471482
+2024-05-21 15:14:58,256 - INFO - Update id=503527586 is handled. Duration 188 ms by bot id=6996471482
+2024-05-21 15:15:36,754 - WARNING - Received SIGINT signal
+2024-05-21 15:15:36,755 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:15:36,755 - INFO - Polling stopped
+2024-05-21 15:15:36,929 - WARNING - Received SIGINT signal
+2024-05-21 15:15:39,671 - INFO - Start polling
+2024-05-21 15:15:39,921 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:15:40,193 - INFO - Update id=503527587 is not handled. Duration 190 ms by bot id=6996471482
+2024-05-21 15:15:40,193 - ERROR - Cause exception while process update id=503527587 by bot id=6996471482
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '(' is reserved and must be escaped with the preceding '\'
+Traceback (most recent call last):
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/main.py", line 228, in start_search_ubi
+    await message.answer("Введите идентификатор УБИ (от 1 до 222):")
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/bot.py", line 509, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/aiohttp.py", line 178, in make_request
+    response = self.check_response(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '(' is reserved and must be escaped with the preceding '\'
+2024-05-21 15:16:02,420 - WARNING - Received SIGINT signal
+2024-05-21 15:16:02,421 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:16:02,421 - INFO - Polling stopped
+2024-05-21 15:16:02,605 - WARNING - Received SIGINT signal
+2024-05-21 15:16:05,361 - INFO - Start polling
+2024-05-21 15:16:05,564 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:16:06,561 - INFO - Update id=503527588 is handled. Duration 278 ms by bot id=6996471482
+2024-05-21 15:16:08,578 - INFO - Поиск УБИ: 123
+2024-05-21 15:16:08,578 - INFO - Подключение к БД
+2024-05-21 15:16:08,740 - INFO - Update id=503527589 is handled. Duration 164 ms by bot id=6996471482
+2024-05-21 15:16:23,363 - WARNING - Received SIGINT signal
+2024-05-21 15:16:23,363 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-21 15:16:23,363 - INFO - Polling stopped
+2024-05-21 15:16:23,551 - WARNING - Received SIGINT signal
+2024-05-22 00:10:34,731 - INFO - Start polling
+2024-05-22 00:10:34,945 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-22 00:11:44,049 - INFO - Update id=503527590 is handled. Duration 274 ms by bot id=6996471482
+2024-05-22 00:11:45,209 - INFO - Update id=503527591 is handled. Duration 154 ms by bot id=6996471482
+2024-05-22 00:11:46,058 - INFO - Запрос последней уязвимости
+2024-05-22 00:11:46,058 - INFO - Подключение к БД
+2024-05-22 00:11:46,208 - INFO - Update id=503527592 is handled. Duration 232 ms by bot id=6996471482
+2024-05-22 00:11:49,491 - INFO - Поиск по BDU: BDU:2024-03740
+2024-05-22 00:11:49,491 - INFO - Подключение к БД
+2024-05-22 00:11:49,530 - INFO - Подключение к БД
+2024-05-22 00:11:49,590 - INFO - Подключение к БД
+2024-05-22 00:11:49,629 - INFO - Подключение к БД
+2024-05-22 00:11:49,671 - INFO - Подключение к БД
+2024-05-22 00:11:49,708 - INFO - Подключение к БД
+2024-05-22 00:11:49,913 - INFO - Update id=503527593 is handled. Duration 423 ms by bot id=6996471482
+2024-05-22 00:11:52,055 - INFO - Update id=503527594 is handled. Duration 207 ms by bot id=6996471482
+2024-05-22 00:11:53,058 - INFO - Запрос последней уязвимости
+2024-05-22 00:11:53,059 - INFO - Подключение к БД
+2024-05-22 00:11:53,295 - INFO - Update id=503527595 is handled. Duration 393 ms by bot id=6996471482
+2024-05-22 00:11:57,084 - INFO - Поиск по CVE: CVE-2024-21050
+2024-05-22 00:11:57,085 - INFO - Подключение к БД
+2024-05-22 00:11:57,128 - INFO - Подключение к БД
+2024-05-22 00:11:57,186 - INFO - Подключение к БД
+2024-05-22 00:11:57,231 - INFO - Подключение к БД
+2024-05-22 00:11:57,277 - INFO - Подключение к БД
+2024-05-22 00:11:57,317 - INFO - Подключение к БД
+2024-05-22 00:11:57,532 - INFO - Update id=503527596 is handled. Duration 448 ms by bot id=6996471482
+2024-05-22 00:11:59,840 - INFO - Update id=503527597 is handled. Duration 119 ms by bot id=6996471482
+2024-05-22 00:12:01,062 - INFO - Update id=503527598 is handled. Duration 206 ms by bot id=6996471482
+2024-05-22 00:12:03,077 - INFO - Update id=503527599 is handled. Duration 146 ms by bot id=6996471482
+2024-05-22 00:12:04,555 - INFO - Update id=503527600 is handled. Duration 687 ms by bot id=6996471482
+2024-05-22 00:12:07,131 - INFO - Запрос статистики
+2024-05-22 00:12:07,131 - INFO - Подключение к БД
+2024-05-22 00:12:07,174 - INFO - Подключение к БД
+2024-05-22 00:12:07,226 - INFO - Подключение к БД
+2024-05-22 00:12:07,267 - INFO - Подключение к БД
+2024-05-22 00:12:07,308 - INFO - Подключение к БД
+2024-05-22 00:12:07,348 - INFO - Подключение к БД
+2024-05-22 00:12:07,384 - INFO - Подключение к БД
+2024-05-22 00:12:07,522 - INFO - Update id=503527601 is handled. Duration 391 ms by bot id=6996471482
+2024-05-22 00:12:09,614 - INFO - Update id=503527602 is not handled. Duration 65 ms by bot id=6996471482
+2024-05-22 00:12:09,614 - ERROR - Cause exception while process update id=503527602 by bot id=6996471482
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '(' is reserved and must be escaped with the preceding '\'
+Traceback (most recent call last):
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/main.py", line 257, in start_search_ubi
+    await message.answer("Введите идентификатор УБИ (от 1 до 222):")
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/bot.py", line 509, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/aiohttp.py", line 178, in make_request
+    response = self.check_response(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '(' is reserved and must be escaped with the preceding '\'
+2024-05-22 00:12:14,264 - INFO - Update id=503527603 is not handled. Duration 64 ms by bot id=6996471482
+2024-05-22 00:12:14,264 - ERROR - Cause exception while process update id=503527603 by bot id=6996471482
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '(' is reserved and must be escaped with the preceding '\'
+Traceback (most recent call last):
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/main.py", line 257, in start_search_ubi
+    await message.answer("Введите идентификатор УБИ (от 1 до 222):")
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/bot.py", line 509, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/aiohttp.py", line 178, in make_request
+    response = self.check_response(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '(' is reserved and must be escaped with the preceding '\'
+2024-05-22 00:12:15,512 - INFO - Update id=503527604 is not handled. Duration 69 ms by bot id=6996471482
+2024-05-22 00:12:15,512 - ERROR - Cause exception while process update id=503527604 by bot id=6996471482
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '(' is reserved and must be escaped with the preceding '\'
+Traceback (most recent call last):
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/home/vadim/test_vkr/bot/main.py", line 257, in start_search_ubi
+    await message.answer("Введите идентификатор УБИ (от 1 до 222):")
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/bot.py", line 509, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/aiohttp.py", line 178, in make_request
+    response = self.check_response(
+  File "/home/vadim/test_vkr/bot/venv/lib/python3.10/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Character '(' is reserved and must be escaped with the preceding '\'
+2024-05-22 00:12:16,755 - INFO - Update id=503527605 is not handled. Duration 1 ms by bot id=6996471482
+2024-05-22 00:12:35,627 - WARNING - Received SIGINT signal
+2024-05-22 00:12:35,627 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-22 00:12:35,627 - INFO - Polling stopped
+2024-05-22 00:12:35,801 - WARNING - Received SIGINT signal
+2024-05-22 00:12:38,544 - INFO - Start polling
+2024-05-22 00:12:38,733 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-22 00:12:40,767 - INFO - Update id=503527606 is handled. Duration 358 ms by bot id=6996471482
+2024-05-22 00:12:42,754 - INFO - Поиск УБИ: 2
+2024-05-22 00:12:42,754 - INFO - Подключение к БД
+2024-05-22 00:12:42,947 - INFO - Update id=503527607 is handled. Duration 194 ms by bot id=6996471482
+2024-05-22 00:15:14,919 - WARNING - Received SIGINT signal
+2024-05-22 00:15:14,920 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-22 00:15:14,920 - INFO - Polling stopped
+2024-05-22 00:15:15,089 - WARNING - Received SIGINT signal
+2024-05-22 00:15:17,911 - INFO - Start polling
+2024-05-22 00:15:18,100 - INFO - Run polling for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-22 00:15:20,865 - INFO - Update id=503527608 is handled. Duration 242 ms by bot id=6996471482
+2024-05-22 00:15:22,036 - INFO - Update id=503527609 is handled. Duration 138 ms by bot id=6996471482
+2024-05-22 00:15:23,017 - INFO - Запрос последней уязвимости
+2024-05-22 00:15:23,017 - INFO - Подключение к БД
+2024-05-22 00:15:23,267 - INFO - Update id=503527610 is handled. Duration 416 ms by bot id=6996471482
+2024-05-22 00:15:26,340 - INFO - Поиск по BDU: BDU:2024-03740
+2024-05-22 00:15:26,340 - INFO - Подключение к БД
+2024-05-22 00:15:26,376 - INFO - Подключение к БД
+2024-05-22 00:15:26,430 - INFO - Подключение к БД
+2024-05-22 00:15:26,470 - INFO - Подключение к БД
+2024-05-22 00:15:26,510 - INFO - Подключение к БД
+2024-05-22 00:15:26,547 - INFO - Подключение к БД
+2024-05-22 00:15:26,774 - INFO - Update id=503527611 is handled. Duration 434 ms by bot id=6996471482
+2024-05-22 00:15:29,719 - INFO - Update id=503527612 is handled. Duration 143 ms by bot id=6996471482
+2024-05-22 00:15:30,951 - INFO - Update id=503527613 is handled. Duration 92 ms by bot id=6996471482
+2024-05-22 00:15:32,242 - INFO - Запрос последней уязвимости
+2024-05-22 00:15:32,242 - INFO - Подключение к БД
+2024-05-22 00:15:32,413 - INFO - Update id=503527614 is handled. Duration 289 ms by bot id=6996471482
+2024-05-22 00:15:35,436 - INFO - Поиск по CVE: CVE-2024-21050
+2024-05-22 00:15:35,436 - INFO - Подключение к БД
+2024-05-22 00:15:35,477 - INFO - Подключение к БД
+2024-05-22 00:15:35,535 - INFO - Подключение к БД
+2024-05-22 00:15:35,579 - INFO - Подключение к БД
+2024-05-22 00:15:35,624 - INFO - Подключение к БД
+2024-05-22 00:15:35,666 - INFO - Подключение к БД
+2024-05-22 00:15:35,900 - INFO - Update id=503527615 is handled. Duration 464 ms by bot id=6996471482
+2024-05-22 00:15:40,453 - INFO - Update id=503527616 is handled. Duration 120 ms by bot id=6996471482
+2024-05-22 00:15:41,647 - INFO - Update id=503527617 is handled. Duration 214 ms by bot id=6996471482
+2024-05-22 00:15:45,926 - INFO - Запрос статистики
+2024-05-22 00:15:45,926 - INFO - Подключение к БД
+2024-05-22 00:15:45,967 - INFO - Подключение к БД
+2024-05-22 00:15:46,030 - INFO - Подключение к БД
+2024-05-22 00:15:46,067 - INFO - Подключение к БД
+2024-05-22 00:15:46,106 - INFO - Подключение к БД
+2024-05-22 00:15:46,145 - INFO - Подключение к БД
+2024-05-22 00:15:46,180 - INFO - Подключение к БД
+2024-05-22 00:15:46,316 - INFO - Update id=503527618 is handled. Duration 390 ms by bot id=6996471482
+2024-05-22 00:15:49,263 - INFO - Update id=503527619 is handled. Duration 82 ms by bot id=6996471482
+2024-05-22 00:15:51,213 - INFO - Поиск УБИ: 4
+2024-05-22 00:15:51,213 - INFO - Подключение к БД
+2024-05-22 00:15:51,333 - INFO - Update id=503527620 is handled. Duration 121 ms by bot id=6996471482
+2024-05-22 00:15:56,472 - WARNING - Received SIGINT signal
+2024-05-22 00:15:56,472 - INFO - Polling stopped for bot @vkrbdu_bot id=6996471482 - 'vkrbdu'
+2024-05-22 00:15:56,473 - INFO - Polling stopped
+2024-05-22 00:15:56,710 - WARNING - Received SIGINT signal

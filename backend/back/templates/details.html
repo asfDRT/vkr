@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styledet.css')}}">
+    <title>Уязвимость детально</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-links">
+                <a href="/">Главная</a>
+                <a href="https://t.me/vkrbdu_bot">Telegram-bot</a>
+                <a href="{{ url_for('ubi_list')}}">УБИ</a>
+                <a href="{{ url_for('statistics')}}">Статистика</a>
+                <a href="{{ url_for('glossary')}}">Глоссарий</a>
+            </div>
+        </div>
+        
+        <h1>Уязвимость {{ vulnerability['identifier'] }}</h1>
+        <button class="back-button" onclick="history.back()">Назад</button>
+        <table>
+            <caption>ФСТЭК</caption>
+            <tr>
+                <th>Идентификатор BDU</th>
+                <td>{{ vulnerability['identifier'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>Идентификатор CVE</th>
+                <td>
+                    {% for cve in vulnerability['cve_links'] %}
+                        <p>{{ cve or "Информация не найдена" }}</p>
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <th>Название</th>
+                <td>{{ vulnerability['name'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>Описание</th>
+                <td>{{ vulnerability['description'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>Дата выявления</th>
+                <td>{{ vulnerability['identify_date'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>Уровень опасности</th>
+                <td>{{ vulnerability['severity'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>Возможные способы устранения</th>
+                <td>
+                    {% if vulnerability['solution'] %}
+                        {% for link in vulnerability['solution'].split() %}
+                            {% if link.startswith('https://') %}
+                                <a href="{{ link }}" target="_blank">{{ link }}</a><br>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        Информация не найдена
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Статус уязвимости</th>
+                <td>{{ vulnerability['vul_status'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>Наличие эксплойта</th>
+                <td>{{ vulnerability['exploit_status'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>Информация об устранении</th>
+                <td>{{ vulnerability['fix_status'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>Источники</th>
+                <td>
+                    {% if vulnerability['sources'] %}
+                        {% for link in vulnerability['sources'].split() %}
+                            {% if link.startswith('https://') %}
+                                <a href="{{ link }}" target="_blank">{{ link }}</a><br>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        Информация не найдена
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Другие сведения</th>
+                <td>{{ vulnerability['other'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>Количество инцидентов</th>
+                <td>{{ vulnerability['vul_incident'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>Класс уязвимости</th>
+                <td>{{ vulnerability['vul_class'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>ПО</th>
+                <td>
+                    {% if vulnerability['software_details'] %}
+                        {% for software in vulnerability['software_details'] %}
+                            <p>{{ software }}</p>
+                        {% endfor %}
+                    {% else %}
+                        Информация не найдена
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Операционные системы</th>
+                <td>
+                    {% for os in vulnerability['os_details'] %}
+                        <p>{{ os or "Информация не найдена" }}</p>
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <caption>NVD (National Vulnerability Database)</caption>
+            <tr>
+                <th>Ссылка на NVD</th>
+                <td>
+                    {% if cve_nvd['cve_link'] %}
+                        <a href="{{ cve_nvd['cve_link'] }}" target="_blank">{{ cve_nvd['cve_link'] }}</a>
+                    {% else %}
+                        Информация не найдена
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Описание NVD</th>
+                <td>{{ cve_nvd['description'] or "Информация не найдена" }}</td>
+            </tr>
+            <tr>
+                <th>Ссылки с NVD</th>
+                <td>
+                    {% if cve_nvd['hyperlinks'] %}
+                        {% for link in cve_nvd['hyperlinks'].split() %}
+                            {% if link.startswith('https://') %}
+                                <a href="{{ link }}" target="_blank">{{ link }}</a><br>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        Информация не найдена
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+        <table>
+            <caption>OpenCVE </caption>
+            <tr>
+                <th>Ссылка OpenCVE</th>
+                <td>
+                    {% if vulnerability['cve_links'] %}
+                        {% for cve in vulnerability['cve_links'] %}
+                            <a href="https://www.opencve.io/cve/{{cve}}" target="_blank">https://www.opencve.io/cve/{{ cve }}</a><br>
+                        {% endfor %}
+                    {% else %}
+                        Информация не найдена
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Вектор атаки</th>
+                <td>
+                    {{ opencve['attack_vector'] or "Информация не найдена" }}
+                </td>
+            </tr>
+            <tr>
+                <th>Сложность атаки</th>
+                <td>
+                    {{ opencve['attack_complexity'] or "Информация не найдена" }}
+                </td>
+            </tr>
+            <tr>
+                <th>Требуемые привилегии</th>
+                <td>
+                    {{ opencve['privileges_required'] or "Информация не найдена" }}
+                </td>
+            </tr>
+            <tr>
+                <th>Взаимодействие с пользователем</th>
+                <td>
+                    {{ opencve['user_interaction'] or "Информация не найдена" }}
+                </td>
+            </tr>
+            <tr>
+                <th>Влияние на конфиденциальность</th>
+                <td>
+                    {{ opencve['confidentiality_impact'] or "Информация не найдена" }}
+                </td>
+            </tr>
+            <tr>
+                <th>Воздействие на целостность</th>
+                <td>
+                    {{ opencve['integrity_impact'] or "Информация не найдена" }}
+                </td>
+            </tr>
+            <tr>
+                <th>Влияние на доступность</th>
+                <td>
+                    {{ opencve['availability_impact'] or "Информация не найдена" }}
+                </td>
+            </tr>
+            <tr>
+                <th>Область применения</th>
+                <td>
+                    {{ opencve['scope'] or "Информация не найдена" }}
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <caption>Exploit-db (Поиск может оказаться пустым)</caption>
+            <tr>
+                <th>Ссылка Exploit-db</th>
+                <td>
+                    {% if vulnerability['cve_links'] %}
+                        {% for cve in vulnerability['cve_links'] %}
+                            <p>{{ cve }}</p>
+                            <a href="https://www.exploit-db.com/search?cve={{ cve }}&verified=true" target="_blank">Поиск Exploit-DB для {{ cve }}</a><br>
+                        {% endfor %}
+                    {% else %}
+                        Информация не найдена
+                    {% endif %}
+                </td>
+            </tr>
+            </tr>
+        </table>
+    </div>
+    <script src="{{url_for('static', filename='forburger.js')}}"></script>
+</body>
+</html>
